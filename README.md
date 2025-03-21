@@ -40,3 +40,4 @@ ColorfulTabBar(
     unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.normal),
   ),
 ```
+

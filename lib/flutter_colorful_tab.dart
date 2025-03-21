@@ -571,19 +571,20 @@ class _TabItemWidget extends AnimatedWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData themeData = Theme.of(context);
-    final TabBarTheme tabBarTheme = TabBarTheme.of(context);
+    // final TabBarTheme tabBarTheme = TabBarTheme.of(context);
+    final TabBarThemeData tabBarThemeData = TabBarTheme.of(context);
     final Animation<double> animation = listenable as Animation<double>;
 
     // To enable TextStyle.lerp(style1, style2, value), both styles must have
     // the same value of inherit. Force that to be inherit=true here.
     final TextStyle defaultStyle = (tab.labelStyle ??
             tabBar.labelStyle ??
-            tabBarTheme.labelStyle ??
+            tabBarThemeData.labelStyle ??
             themeData.primaryTextTheme.bodyLarge!)
         .copyWith(inherit: true);
     final TextStyle defaultUnselectedStyle = (tab.unselectedLabelStyle ??
             tabBar.unselectedLabelStyle ??
-            tabBarTheme.unselectedLabelStyle ??
+        tabBarThemeData.unselectedLabelStyle ??
             tabBar.labelStyle ??
             themeData.primaryTextTheme.bodyLarge!)
         .copyWith(inherit: true);
@@ -594,11 +595,11 @@ class _TabItemWidget extends AnimatedWidget {
 
     final Color selectedColor = tab.labelColor ??
         tabBar.labelColor ??
-        tabBarTheme.labelColor ??
+        tabBarThemeData.labelColor ??
         themeData.primaryTextTheme.bodyLarge!.color!;
     final Color unselectedColor = tab.unselectedLabelColor ??
         tabBar.unselectedLabelColor ??
-        tabBarTheme.unselectedLabelColor ??
+        tabBarThemeData.unselectedLabelColor ??
         selectedColor.withAlpha(0xB2); // 70% alpha
 
     final Color color = selected
