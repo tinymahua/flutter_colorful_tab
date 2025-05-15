@@ -62,13 +62,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_colorful_tab:
+  flutter_colorful_tab_keep:
     dependency: "direct dev"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.1.1"
+    version: "0.1.2"
   flutter_lints:
     dependency: "direct dev"
     description:

@@ -1,4 +1,4 @@
-library flutter_colorful_tab;
+library flutter_colorful_tab_keep;
 
 import 'dart:math';
 import 'dart:ui';
